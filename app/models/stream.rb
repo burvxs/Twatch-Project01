@@ -1,4 +1,4 @@
 class Stream < ApplicationRecord
-    belongs_to :user
-    has_many :comments, optional: true
+    belongs_to :user, optional: true
+    has_many :comments
 end

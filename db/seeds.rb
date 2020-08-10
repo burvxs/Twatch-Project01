@@ -28,7 +28,7 @@ u2 = User.create!(
     bio: "My wife left me",
     ph_number: "0452494324"
 )
-u2 = User.create!(
+u3 = User.create!(
     name: "Shaun Mendes",
     handle: "mennymez",
     email: "mezzymez@gmail.com",
@@ -53,5 +53,51 @@ s2 = Stream.create!(
     capture_url: "clips/clip_2.avi",
     video_time: "10.00"
 )
+
+u1.streams << s1
+u2.streams << s2
+
+puts "Creating user stream associations"
+puts "User #{User.last.name} has #{User.last.streams.length} streams"
+
+puts "Creating comments"
+
+c1 = Comment.create!(
+    comment: "Hey bro do a flip"
+)
+c2 = Comment.create!(
+    comment: "you suck"
+)
+c3 = Comment.create!(
+    comment: "Pick up the shotty"
+)
+c4 = Comment.create!(
+    comment: "Play doki doki literature club"
+)
+c5 = Comment.create!(
+    comment: "OMG"
+)
+c6 = Comment.create!(
+    comment: "Thats crazy"
+)
+c7 = Comment.create!(
+    comment: "Whats your irl name?"
+)
+
+puts "Created #{Comment.count} comments:"
+puts Comment.all.pluck(:comment).join ", "
+
+puts "Creating stream comment associations"
+puts "Stream #{Stream.last.title} has #{Stream.last.comments.length} comments"
+
+s1.comments << c1 << c2 << c5 << c7
+s2.comments << c3 << c4 << c6
+
+puts "Creating user comment associations"
+puts "User #{User.last.name} has #{User.last.comments.length} comments"
+
+u3.comments << c1 << c2 << c5 << c7
+u2.comments << c3 << c4 << c6
+
 
     
