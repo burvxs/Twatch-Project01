@@ -8,8 +8,17 @@
     <%= stylesheet_link_tag    'application', media: 'all' %>
     <%= javascript_include_tag 'application' %>
   </head>
-
   <body>
+    <nav>
+      <%= link_to "Browse", streams_path, class: "nav-browse" %> 
+      <%= link_to "Channels", streams_path, class: "nav-channels" %> 
+      <%= link_to "Feed", streams_path, class: "nav-feed" %> 
+      <% if @current_user.present? %>
+        <%= link_to edit_user_path(@current_user.id) do %>
+          <i class="fas fa-cog"></i>
+        <% end %>
+      <% end %>
+    </nav>
     <%= yield %>
   </body>
 </html>

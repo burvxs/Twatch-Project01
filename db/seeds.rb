@@ -15,7 +15,7 @@ u1 = User.create!(
     handle: "burvxs",
     email: "benny.purvis@hotamil.com",
     address: "1234 Fake Street",
-    password_digest: "chicken",
+    password: "chicken",
     bio: "Trying to go pro at fortnite",
     ph_number: "045249432"
 )
@@ -24,7 +24,7 @@ u2 = User.create!(
     handle: "seniorzoink",
     email: "yungbludyungcuz@gmai.com",
     address: "Ayyyoooo",
-    password_digest: "chicken",
+    password: "chicken",
     bio: "My wife left me",
     ph_number: "0452494324"
 )
@@ -33,7 +33,7 @@ u3 = User.create!(
     handle: "mennymez",
     email: "mezzymez@gmail.com",
     address: "Mez Street 104 Southside",
-    password_digest: "chicken",
+    password: "chicken",
     bio: "Hey names shaun",
     ph_number: "0452494324"
 )
@@ -61,6 +61,7 @@ puts "Creating user stream associations"
 puts "User #{User.last.name} has #{User.last.streams.length} streams"
 
 puts "Creating comments"
+Comment.destroy_all
 
 c1 = Comment.create!(
     comment: "Hey bro do a flip"
