@@ -1,24 +1,14 @@
-# README
+#Twatch a twitch clone built by: 
+#Ben Purvis 16/08/2020 
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+This project includes three core models streams, comments, and users. 
+I have used OpenTok to use the browser as screen capturing software which
+broadcasts the capture and users can watch the broadcast on twatch! 
 
-Things you may want to cover:
+#Here's the live link.
+https://twatch-live-streaming.herokuapp.com/
 
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+#Built with. 
+Ruby 2.7.0
+Rails 5.2.4.3
+OpenTok Video API https://tokbox.com/developer/
