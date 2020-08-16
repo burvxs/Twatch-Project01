@@ -8,7 +8,7 @@ broadcasts the capture and users can watch the broadcast on twatch!
 **Here's the live link:**  
 https://twatch-live-streaming.herokuapp.com/
 
-#Built with. 
-Ruby 2.7.0
-Rails 5.2.4.3
+**Built with:**   
+Ruby 2.7.0  
+Rails 5.2.4.3  
 OpenTok Video API https://tokbox.com/developer/
