@@ -1,4 +1,4 @@
-#Twatch a twitch clone built by:**  
+# Twatch a twitch clone built by: 
 **Ben Purvis 16/08/2020**
 
 This project includes three core models streams, comments, and users. 
